@@ -17,13 +17,16 @@ function setup() {
 
 function draw() {
     background(0);
+    drawGrid(); //temporary thing to make us debug better
     if (mouseIsPressed) {
-        drawGrid(); //temporary thing to make us debug better
     }
 
     food.display();
     if (gameStart && !gameOver) {
         snake.move();
+        if (snake.collided()) {
+            gameOver = true;
+        }
     }
     snake.display();
 }
