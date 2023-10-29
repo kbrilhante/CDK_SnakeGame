@@ -15,7 +15,15 @@ class Food {
         this.x = floor(random(hb));
         this.y = floor(random(vb));
         if (this.x === snake.head.x && this.y === snake.head.y) {
+            console.log("reposition")
             this.newPosition();
+        }
+        for (let i = 0; i < snake.tail.length; i++) {
+            const tailPart = snake.tail[i];
+            if (this.x === tailPart.x && this.y === tailPart.y) {
+                console.log("reposition")
+                this.newPosition();
+            }
         }
     }
 }

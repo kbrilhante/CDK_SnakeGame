@@ -46,19 +46,6 @@ class Snake {
                 this.tail[i] = this.tail[i - 1];
             }
         }
-
-        // if (this.head.x > 30) {
-        //     this.head.x = 0
-        // }
-        // if (this.head.x < 0) {
-        //     this.head.x = 30
-        // }
-        // if (this.head.y > 30) {
-        //     this.head.y = 0
-        // }
-        // if (this.head.y < 0) {
-        //     this.head.y = 30
-        // }
     }
     eat() {
         if (this.head.x === food.x && this.head.y === food.y) {
