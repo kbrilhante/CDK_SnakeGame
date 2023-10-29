@@ -5,6 +5,7 @@ let gameStart, gameOver;
 function setup() {
     canvas = createCanvas(600, 600);
     frameRate(5);
+    noCursor();
 
     gameStart = false;
     gameOver = false;
